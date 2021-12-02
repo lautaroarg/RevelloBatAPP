@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace RevelloAPP
 {
-    public partial class Form1 : Form
+    public partial class frmBaterias : Form
     {
-        public Form1()
+        public frmBaterias()
         {
             InitializeComponent();
+        }
+
+        private void frmBaterias_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
