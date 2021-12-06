@@ -20,8 +20,19 @@ namespace RevelloAPP
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
 
+        }
+
+        private void btnBaterias_Click(object sender, EventArgs e)
+        {
+            frmBaterias ofrm = new frmBaterias();
+            ofrm.Show();
+        }
+
+        private void minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
