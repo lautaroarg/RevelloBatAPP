@@ -16,7 +16,7 @@ namespace RevelloAPP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBaterias());
+            Application.Run(new frmMenu());
         }
     }
 }
