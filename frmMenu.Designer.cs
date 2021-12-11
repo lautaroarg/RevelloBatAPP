@@ -31,20 +31,20 @@ namespace RevelloAPP
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.minimizar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnReportes = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnVentas = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnCompras = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnBaterias = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.minimizar = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnBaterias = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnReportes = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCompras = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnVentas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,28 @@ namespace RevelloAPP
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1456, 121);
             this.panel1.TabIndex = 38;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.minimizar);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(1337, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(119, 121);
+            this.panel3.TabIndex = 2;
+            // 
+            // minimizar
+            // 
+            this.minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
+            this.minimizar.Location = new System.Drawing.Point(0, 0);
+            this.minimizar.Name = "minimizar";
+            this.minimizar.Size = new System.Drawing.Size(47, 44);
+            this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimizar.TabIndex = 1;
+            this.minimizar.TabStop = false;
+            this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
             // 
             // pictureBox1
             // 
@@ -79,107 +101,18 @@ namespace RevelloAPP
             this.panel2.Size = new System.Drawing.Size(1456, 676);
             this.panel2.TabIndex = 39;
             // 
-            // btnReportes
+            // panel4
             // 
-            this.btnReportes.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReportes.BackColor = System.Drawing.Color.Black;
-            this.btnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReportes.BorderRadius = 7;
-            this.btnReportes.ButtonText = "REPORTE";
-            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReportes.DisabledColor = System.Drawing.Color.Gray;
-            this.btnReportes.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnReportes.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnReportes.Iconimage")));
-            this.btnReportes.Iconimage_right = null;
-            this.btnReportes.Iconimage_right_Selected = null;
-            this.btnReportes.Iconimage_Selected = null;
-            this.btnReportes.IconMarginLeft = 0;
-            this.btnReportes.IconMarginRight = 0;
-            this.btnReportes.IconRightVisible = true;
-            this.btnReportes.IconRightZoom = 0D;
-            this.btnReportes.IconVisible = true;
-            this.btnReportes.IconZoom = 90D;
-            this.btnReportes.IsTab = false;
-            this.btnReportes.Location = new System.Drawing.Point(843, 381);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Normalcolor = System.Drawing.Color.Black;
-            this.btnReportes.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReportes.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnReportes.selected = false;
-            this.btnReportes.Size = new System.Drawing.Size(314, 133);
-            this.btnReportes.TabIndex = 41;
-            this.btnReportes.Text = "REPORTE";
-            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnReportes.Textcolor = System.Drawing.Color.Yellow;
-            this.btnReportes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnVentas
-            // 
-            this.btnVentas.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnVentas.BackColor = System.Drawing.Color.Black;
-            this.btnVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVentas.BorderRadius = 7;
-            this.btnVentas.ButtonText = "VENTAS";
-            this.btnVentas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVentas.DisabledColor = System.Drawing.Color.Gray;
-            this.btnVentas.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnVentas.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnVentas.Iconimage")));
-            this.btnVentas.Iconimage_right = null;
-            this.btnVentas.Iconimage_right_Selected = null;
-            this.btnVentas.Iconimage_Selected = null;
-            this.btnVentas.IconMarginLeft = 0;
-            this.btnVentas.IconMarginRight = 0;
-            this.btnVentas.IconRightVisible = true;
-            this.btnVentas.IconRightZoom = 0D;
-            this.btnVentas.IconVisible = true;
-            this.btnVentas.IconZoom = 90D;
-            this.btnVentas.IsTab = false;
-            this.btnVentas.Location = new System.Drawing.Point(278, 381);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Normalcolor = System.Drawing.Color.Black;
-            this.btnVentas.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnVentas.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnVentas.selected = false;
-            this.btnVentas.Size = new System.Drawing.Size(314, 133);
-            this.btnVentas.TabIndex = 40;
-            this.btnVentas.Text = "VENTAS";
-            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnVentas.Textcolor = System.Drawing.Color.Yellow;
-            this.btnVentas.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnCompras
-            // 
-            this.btnCompras.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCompras.BackColor = System.Drawing.Color.Black;
-            this.btnCompras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCompras.BorderRadius = 7;
-            this.btnCompras.ButtonText = "COMPRAS";
-            this.btnCompras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCompras.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCompras.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCompras.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCompras.Iconimage")));
-            this.btnCompras.Iconimage_right = null;
-            this.btnCompras.Iconimage_right_Selected = null;
-            this.btnCompras.Iconimage_Selected = null;
-            this.btnCompras.IconMarginLeft = 0;
-            this.btnCompras.IconMarginRight = 0;
-            this.btnCompras.IconRightVisible = true;
-            this.btnCompras.IconRightZoom = 0D;
-            this.btnCompras.IconVisible = true;
-            this.btnCompras.IconZoom = 90D;
-            this.btnCompras.IsTab = false;
-            this.btnCompras.Location = new System.Drawing.Point(843, 140);
-            this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Normalcolor = System.Drawing.Color.Black;
-            this.btnCompras.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCompras.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCompras.selected = false;
-            this.btnCompras.Size = new System.Drawing.Size(314, 133);
-            this.btnCompras.TabIndex = 39;
-            this.btnCompras.Text = "COMPRAS";
-            this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCompras.Textcolor = System.Drawing.Color.Yellow;
-            this.btnCompras.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.Controls.Add(this.btnBaterias);
+            this.panel4.Controls.Add(this.btnReportes);
+            this.panel4.Controls.Add(this.btnCompras);
+            this.panel4.Controls.Add(this.btnVentas);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1456, 662);
+            this.panel4.TabIndex = 42;
             // 
             // btnBaterias
             // 
@@ -216,40 +149,107 @@ namespace RevelloAPP
             this.btnBaterias.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaterias.Click += new System.EventHandler(this.btnBaterias_Click);
             // 
-            // minimizar
+            // btnReportes
             // 
-            this.minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.minimizar.Image = ((System.Drawing.Image)(resources.GetObject("minimizar.Image")));
-            this.minimizar.Location = new System.Drawing.Point(0, 0);
-            this.minimizar.Name = "minimizar";
-            this.minimizar.Size = new System.Drawing.Size(47, 44);
-            this.minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.minimizar.TabIndex = 1;
-            this.minimizar.TabStop = false;
-            this.minimizar.Click += new System.EventHandler(this.minimizar_Click);
+            this.btnReportes.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReportes.BackColor = System.Drawing.Color.Black;
+            this.btnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReportes.BorderRadius = 7;
+            this.btnReportes.ButtonText = "REPORTE";
+            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportes.DisabledColor = System.Drawing.Color.Gray;
+            this.btnReportes.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnReportes.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnReportes.Iconimage")));
+            this.btnReportes.Iconimage_right = null;
+            this.btnReportes.Iconimage_right_Selected = null;
+            this.btnReportes.Iconimage_Selected = null;
+            this.btnReportes.IconMarginLeft = 0;
+            this.btnReportes.IconMarginRight = 0;
+            this.btnReportes.IconRightVisible = true;
+            this.btnReportes.IconRightZoom = 0D;
+            this.btnReportes.IconVisible = true;
+            this.btnReportes.IconZoom = 90D;
+            this.btnReportes.IsTab = false;
+            this.btnReportes.Location = new System.Drawing.Point(843, 381);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Normalcolor = System.Drawing.Color.Black;
+            this.btnReportes.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReportes.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnReportes.selected = false;
+            this.btnReportes.Size = new System.Drawing.Size(314, 133);
+            this.btnReportes.TabIndex = 41;
+            this.btnReportes.Text = "REPORTE";
+            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReportes.Textcolor = System.Drawing.Color.Yellow;
+            this.btnReportes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel3
+            // btnCompras
             // 
-            this.panel3.Controls.Add(this.minimizar);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1337, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(119, 121);
-            this.panel3.TabIndex = 2;
+            this.btnCompras.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCompras.BackColor = System.Drawing.Color.Black;
+            this.btnCompras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCompras.BorderRadius = 7;
+            this.btnCompras.ButtonText = "COMPRAS";
+            this.btnCompras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCompras.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCompras.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCompras.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCompras.Iconimage")));
+            this.btnCompras.Iconimage_right = null;
+            this.btnCompras.Iconimage_right_Selected = null;
+            this.btnCompras.Iconimage_Selected = null;
+            this.btnCompras.IconMarginLeft = 0;
+            this.btnCompras.IconMarginRight = 0;
+            this.btnCompras.IconRightVisible = true;
+            this.btnCompras.IconRightZoom = 0D;
+            this.btnCompras.IconVisible = true;
+            this.btnCompras.IconZoom = 90D;
+            this.btnCompras.IsTab = false;
+            this.btnCompras.Location = new System.Drawing.Point(843, 140);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Normalcolor = System.Drawing.Color.Black;
+            this.btnCompras.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCompras.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCompras.selected = false;
+            this.btnCompras.Size = new System.Drawing.Size(314, 133);
+            this.btnCompras.TabIndex = 39;
+            this.btnCompras.Text = "COMPRAS";
+            this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCompras.Textcolor = System.Drawing.Color.Yellow;
+            this.btnCompras.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel4
+            // btnVentas
             // 
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.Controls.Add(this.btnBaterias);
-            this.panel4.Controls.Add(this.btnReportes);
-            this.panel4.Controls.Add(this.btnCompras);
-            this.panel4.Controls.Add(this.btnVentas);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1456, 662);
-            this.panel4.TabIndex = 42;
+            this.btnVentas.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnVentas.BackColor = System.Drawing.Color.Black;
+            this.btnVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVentas.BorderRadius = 7;
+            this.btnVentas.ButtonText = "VENTAS";
+            this.btnVentas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVentas.DisabledColor = System.Drawing.Color.Gray;
+            this.btnVentas.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnVentas.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnVentas.Iconimage")));
+            this.btnVentas.Iconimage_right = null;
+            this.btnVentas.Iconimage_right_Selected = null;
+            this.btnVentas.Iconimage_Selected = null;
+            this.btnVentas.IconMarginLeft = 0;
+            this.btnVentas.IconMarginRight = 0;
+            this.btnVentas.IconRightVisible = true;
+            this.btnVentas.IconRightZoom = 0D;
+            this.btnVentas.IconVisible = true;
+            this.btnVentas.IconZoom = 90D;
+            this.btnVentas.IsTab = false;
+            this.btnVentas.Location = new System.Drawing.Point(278, 381);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Normalcolor = System.Drawing.Color.Black;
+            this.btnVentas.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnVentas.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnVentas.selected = false;
+            this.btnVentas.Size = new System.Drawing.Size(314, 133);
+            this.btnVentas.TabIndex = 40;
+            this.btnVentas.Text = "VENTAS";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnVentas.Textcolor = System.Drawing.Color.Yellow;
+            this.btnVentas.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // frmMenu
             // 
@@ -264,10 +264,10 @@ namespace RevelloAPP
             this.Text = "frmMenu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.minimizar)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
