@@ -216,6 +216,7 @@ namespace RevelloAPP
             this.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCompras.Textcolor = System.Drawing.Color.Yellow;
             this.btnCompras.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // btnVentas
             // 

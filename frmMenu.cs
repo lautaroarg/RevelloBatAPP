@@ -34,5 +34,11 @@ namespace RevelloAPP
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            frmCompras ofrm = new frmCompras();
+            ofrm.Show();
+        }
     }
 }

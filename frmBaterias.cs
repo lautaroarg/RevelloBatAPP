@@ -158,11 +158,18 @@ namespace RevelloAPP
         //Instancia el metodo Inactivar, limpiarforms y mostrar bateriasactivas
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (editarse == true)
+            {
             objEntidad.IdBateria1 =Int32.Parse(txtCodigo.Text);
             objNegocio.Inactivar(objEntidad);
             MessageBox.Show("Bateria inactivada");
             LimpiarForms();
             MostrarBateriasActivas();
+            }
+            else
+            {
+                MessageBox.Show("Debes seleccionar una fila y hacer click en editarse, antes de eliminarla");
+            }
         }
     }
 
