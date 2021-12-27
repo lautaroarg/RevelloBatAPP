@@ -18,19 +18,29 @@ namespace RevelloAPP
         negocioBateria batnego = new negocioBateria();
         private DateTime fechain;
         private DateTime fechafin;
+        
 
 
         public frmCompras()
         {
             InitializeComponent();
         }
-
+        public void LimpiarForms()
+        {
+            txtCantidad.Text = "";
+            txtCodigo.Text = "";
+            txtTotal.Text = "";
+            cboBaterias.Text = "";
+            dtpFecha.Text = "";
+            dgvCompras.ClearSelection();
+            cboBaterias.Focus();
+        }
         private void frmCompras_Load(object sender, EventArgs e)
 
         {
             
             MostrarCompras();
-            
+            LimpiarForms();
             cboBaterias.DataSource = batnego.TablaActivas();
             cboBaterias.DisplayMember = "Nombre";
             cboBaterias.ValueMember = "IdBateria";
@@ -45,30 +55,30 @@ namespace RevelloAPP
             dgvCompras.Columns[2].Width = 35;
             dgvCompras.Columns[3].Width =70;
             dgvCompras.Columns[4].Width = 90;
-            dgvCompras.ClearSelection();
+            
             
 
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+                try
             {
-            entidad.Bateria1 =Int32.Parse(cboBaterias.SelectedValue.ToString());
-            entidad.CantidadComprado1 =Int32.Parse(txtCantidad.Text);
-            entidad.FechaCompra1 = dtpFecha.Value;
+                entidad.Bateria1 =Int32.Parse(cboBaterias.SelectedValue.ToString());
+                entidad.CantidadComprado1 =Int32.Parse(txtCantidad.Text);
+                entidad.FechaCompra1 = dtpFecha.Value;
 
-            objNegocio.AgregarCompra(entidad);
-            MessageBox.Show("Registro guardado");
-
+                objNegocio.AgregarCompra(entidad);
+                MessageBox.Show("Compra cargada con exito");
+                MostrarCompras();
+                LimpiarForms();
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.ToString());
             }
-
-
+            
 
         }
 
@@ -84,6 +94,35 @@ namespace RevelloAPP
             
             dgvCompras.DataSource = objNegocio.ListarComprasporFecha(fechain, fechafin);
             dgvCompras.ClearSelection();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == "") 
+            {
+                MessageBox.Show("Primero debes seleccionar una compra para eliminarla");
+            }
+            else
+            {
+                entidad.Bateria1 =Int32.Parse(txtCodigo.Text);
+                objNegocio.EliminarCompra(entidad);
+                MessageBox.Show("Compra eliminada con exito");
+                MostrarCompras();
+                LimpiarForms();
+
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvCompras.SelectedRows.Count > 0)
+            {
+                txtCodigo.Text = dgvCompras.CurrentRow.Cells[0].Value.ToString();
+                cboBaterias.Text= dgvCompras.CurrentRow.Cells[1].Value.ToString();
+                txtCantidad.Text= dgvCompras.CurrentRow.Cells[2].Value.ToString();
+                dtpFecha.Text= dgvCompras.CurrentRow.Cells[3].Value.ToString();
+                txtTotal.Text= dgvCompras.CurrentRow.Cells[4].Value.ToString();
+            }
         }
     }
 }

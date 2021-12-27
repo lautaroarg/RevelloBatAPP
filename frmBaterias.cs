@@ -145,7 +145,7 @@ namespace RevelloAPP
                 txtPCompra.Text = dgvBaterias.CurrentRow.Cells[2].Value.ToString();
                 txtPVenta.Text = dgvBaterias.CurrentRow.Cells[3].Value.ToString();
                 txtStock.Text = dgvBaterias.CurrentRow.Cells[4].Value.ToString();
-               cboEstado.Text = dgvBaterias.CurrentRow.Cells[5].Value.ToString();
+                cboEstado.Text = dgvBaterias.CurrentRow.Cells[5].Value.ToString();
                 editarse = true;
 
             }

@@ -67,8 +67,8 @@ namespace RevelloAPP
             this.btnImprimir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -96,7 +96,7 @@ namespace RevelloAPP
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(450, 139);
+            this.label10.Location = new System.Drawing.Point(440, 139);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 20);
             this.label10.TabIndex = 89;
@@ -549,40 +549,7 @@ namespace RevelloAPP
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Textcolor = System.Drawing.Color.White;
             this.btnEliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditar.BorderRadius = 7;
-            this.btnEditar.ButtonText = "EDITAR";
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEditar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEditar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEditar.Iconimage")));
-            this.btnEditar.Iconimage_right = null;
-            this.btnEditar.Iconimage_right_Selected = null;
-            this.btnEditar.Iconimage_Selected = null;
-            this.btnEditar.IconMarginLeft = 0;
-            this.btnEditar.IconMarginRight = 0;
-            this.btnEditar.IconRightVisible = true;
-            this.btnEditar.IconRightZoom = 0D;
-            this.btnEditar.IconVisible = true;
-            this.btnEditar.IconZoom = 90D;
-            this.btnEditar.IsTab = false;
-            this.btnEditar.Location = new System.Drawing.Point(252, 584);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnEditar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnEditar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnEditar.selected = false;
-            this.btnEditar.Size = new System.Drawing.Size(150, 48);
-            this.btnEditar.TabIndex = 69;
-            this.btnEditar.Text = "EDITAR";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEditar.Textcolor = System.Drawing.Color.White;
-            this.btnEditar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -605,7 +572,7 @@ namespace RevelloAPP
             this.btnAgregar.IconVisible = true;
             this.btnAgregar.IconZoom = 90D;
             this.btnAgregar.IsTab = false;
-            this.btnAgregar.Location = new System.Drawing.Point(37, 584);
+            this.btnAgregar.Location = new System.Drawing.Point(57, 584);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
             this.btnAgregar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
@@ -618,12 +585,48 @@ namespace RevelloAPP
             this.btnAgregar.Textcolor = System.Drawing.Color.White;
             this.btnAgregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.BorderRadius = 7;
+            this.btnEditar.ButtonText = "EDITAR";
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnEditar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEditar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEditar.Iconimage")));
+            this.btnEditar.Iconimage_right = null;
+            this.btnEditar.Iconimage_right_Selected = null;
+            this.btnEditar.Iconimage_Selected = null;
+            this.btnEditar.IconMarginLeft = 0;
+            this.btnEditar.IconMarginRight = 0;
+            this.btnEditar.IconRightVisible = true;
+            this.btnEditar.IconRightZoom = 0D;
+            this.btnEditar.IconVisible = true;
+            this.btnEditar.IconZoom = 90D;
+            this.btnEditar.IsTab = false;
+            this.btnEditar.Location = new System.Drawing.Point(264, 584);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
+            this.btnEditar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
+            this.btnEditar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnEditar.selected = false;
+            this.btnEditar.Size = new System.Drawing.Size(150, 48);
+            this.btnEditar.TabIndex = 102;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEditar.Textcolor = System.Drawing.Color.White;
+            this.btnEditar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // frmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1345, 637);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.label12);
@@ -650,7 +653,6 @@ namespace RevelloAPP
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvCompras);
             this.Controls.Add(this.label4);
@@ -696,7 +698,6 @@ namespace RevelloAPP
         private Bunifu.Framework.UI.BunifuFlatButton btnImprimir;
         private Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
         private Bunifu.Framework.UI.BunifuFlatButton btnEliminar;
-        private Bunifu.Framework.UI.BunifuFlatButton btnEditar;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvCompras;
         private System.Windows.Forms.Label label4;
@@ -712,5 +713,6 @@ namespace RevelloAPP
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEditar;
     }
 }
