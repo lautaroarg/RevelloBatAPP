@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocio;
 using CapaEntidades;
+using System.Net.Mail;
+using System.Net;
 
 namespace RevelloAPP
 {
@@ -122,6 +117,55 @@ namespace RevelloAPP
                 MostrarVentas();
                 LimpiarForms();
 
+            }
+        }
+        private void mandarMail()
+        {
+            MailMessage msg = new MailMessage();
+            msg.To.Add(txtEmail.Text);
+            msg.Subject = "Comprobante de compra en Baterias Revello";
+            msg.SubjectEncoding = System.Text.Encoding.UTF8;
+
+
+
+
+
+
+
+
+
+
+            msg.Body = "Haz realizado la compra de " + txtCantidad.Text + " " + cboBaterias.Text + ". Porfavor, no eliminar el mail";
+            msg.BodyEncoding = System.Text.Encoding.UTF8;
+
+            msg.IsBodyHtml = false;
+            msg.From = new MailAddress("peklomas95@gmail.com");
+
+            SmtpClient cliente = new SmtpClient();
+            cliente.Credentials = new NetworkCredential("peklomas95@gmail.com", "Lautidry052");
+            cliente.Port = 587; cliente.EnableSsl = true; cliente.Host = "smtp.gmail.com";
+
+            try
+            {
+                cliente.Send(msg);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "")
+            {
+                MessageBox.Show("Debes seleccionar los datos de la venta");
+            }
+            else
+            {
+            mandarMail();
+            MessageBox.Show("Comprobante enviado correctamente al cliente");
             }
         }
     }
