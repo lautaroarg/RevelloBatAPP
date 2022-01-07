@@ -40,8 +40,6 @@ namespace RevelloAPP
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnExcel = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnImprimir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -84,7 +82,7 @@ namespace RevelloAPP
             this.txtMarca.BackColor = System.Drawing.Color.White;
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(907, 226);
+            this.txtMarca.Location = new System.Drawing.Point(907, 215);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(308, 22);
             this.txtMarca.TabIndex = 46;
@@ -94,7 +92,7 @@ namespace RevelloAPP
             this.txtCodigo.BackColor = System.Drawing.Color.White;
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(905, 320);
+            this.txtCodigo.Location = new System.Drawing.Point(905, 309);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(127, 22);
@@ -103,7 +101,7 @@ namespace RevelloAPP
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(894, 212);
+            this.pictureBox6.Location = new System.Drawing.Point(894, 201);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(333, 45);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,7 +111,7 @@ namespace RevelloAPP
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(894, 306);
+            this.pictureBox5.Location = new System.Drawing.Point(894, 295);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(150, 45);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +123,7 @@ namespace RevelloAPP
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(890, 189);
+            this.label6.Location = new System.Drawing.Point(890, 178);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 20);
             this.label6.TabIndex = 40;
@@ -136,79 +134,11 @@ namespace RevelloAPP
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(890, 283);
+            this.label5.Location = new System.Drawing.Point(890, 272);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 20);
             this.label5.TabIndex = 39;
             this.label5.Text = "CODIGO";
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExcel.BorderRadius = 7;
-            this.btnExcel.ButtonText = "EXCEL";
-            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcel.DisabledColor = System.Drawing.Color.Gray;
-            this.btnExcel.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnExcel.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnExcel.Iconimage")));
-            this.btnExcel.Iconimage_right = null;
-            this.btnExcel.Iconimage_right_Selected = null;
-            this.btnExcel.Iconimage_Selected = null;
-            this.btnExcel.IconMarginLeft = 0;
-            this.btnExcel.IconMarginRight = 0;
-            this.btnExcel.IconRightVisible = true;
-            this.btnExcel.IconRightZoom = 0D;
-            this.btnExcel.IconVisible = true;
-            this.btnExcel.IconZoom = 90D;
-            this.btnExcel.IsTab = false;
-            this.btnExcel.Location = new System.Drawing.Point(1109, 84);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnExcel.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnExcel.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnExcel.selected = false;
-            this.btnExcel.Size = new System.Drawing.Size(150, 48);
-            this.btnExcel.TabIndex = 38;
-            this.btnExcel.Text = "EXCEL";
-            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnExcel.Textcolor = System.Drawing.Color.White;
-            this.btnExcel.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnImprimir.BorderRadius = 7;
-            this.btnImprimir.ButtonText = "IMPRIMIR";
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.DisabledColor = System.Drawing.Color.Gray;
-            this.btnImprimir.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnImprimir.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Iconimage")));
-            this.btnImprimir.Iconimage_right = null;
-            this.btnImprimir.Iconimage_right_Selected = null;
-            this.btnImprimir.Iconimage_Selected = null;
-            this.btnImprimir.IconMarginLeft = 0;
-            this.btnImprimir.IconMarginRight = 0;
-            this.btnImprimir.IconRightVisible = true;
-            this.btnImprimir.IconRightZoom = 0D;
-            this.btnImprimir.IconVisible = true;
-            this.btnImprimir.IconZoom = 90D;
-            this.btnImprimir.IsTab = false;
-            this.btnImprimir.Location = new System.Drawing.Point(859, 84);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnImprimir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            this.btnImprimir.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnImprimir.selected = false;
-            this.btnImprimir.Size = new System.Drawing.Size(150, 48);
-            this.btnImprimir.TabIndex = 37;
-            this.btnImprimir.Text = "IMPRIMIR";
-            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnImprimir.Textcolor = System.Drawing.Color.White;
-            this.btnImprimir.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btnGuardar
             // 
@@ -500,7 +430,7 @@ namespace RevelloAPP
             this.txtStock.BackColor = System.Drawing.Color.White;
             this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStock.Location = new System.Drawing.Point(1088, 320);
+            this.txtStock.Location = new System.Drawing.Point(1088, 309);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(127, 22);
             this.txtStock.TabIndex = 50;
@@ -508,7 +438,7 @@ namespace RevelloAPP
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1077, 306);
+            this.pictureBox1.Location = new System.Drawing.Point(1077, 295);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -520,7 +450,7 @@ namespace RevelloAPP
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(1073, 283);
+            this.label8.Location = new System.Drawing.Point(1073, 272);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 20);
             this.label8.TabIndex = 48;
@@ -531,7 +461,7 @@ namespace RevelloAPP
             this.txtPVenta.BackColor = System.Drawing.Color.White;
             this.txtPVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPVenta.Location = new System.Drawing.Point(1088, 415);
+            this.txtPVenta.Location = new System.Drawing.Point(1088, 404);
             this.txtPVenta.Name = "txtPVenta";
             this.txtPVenta.Size = new System.Drawing.Size(127, 22);
             this.txtPVenta.TabIndex = 56;
@@ -539,7 +469,7 @@ namespace RevelloAPP
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1077, 401);
+            this.pictureBox4.Location = new System.Drawing.Point(1077, 390);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(150, 45);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -551,7 +481,7 @@ namespace RevelloAPP
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(1073, 378);
+            this.label7.Location = new System.Drawing.Point(1073, 367);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 20);
             this.label7.TabIndex = 54;
@@ -562,7 +492,7 @@ namespace RevelloAPP
             this.txtPCompra.BackColor = System.Drawing.Color.White;
             this.txtPCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPCompra.Location = new System.Drawing.Point(905, 415);
+            this.txtPCompra.Location = new System.Drawing.Point(905, 404);
             this.txtPCompra.Name = "txtPCompra";
             this.txtPCompra.Size = new System.Drawing.Size(127, 22);
             this.txtPCompra.TabIndex = 53;
@@ -570,7 +500,7 @@ namespace RevelloAPP
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(894, 401);
+            this.pictureBox7.Location = new System.Drawing.Point(894, 390);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(150, 45);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -582,7 +512,7 @@ namespace RevelloAPP
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(890, 378);
+            this.label9.Location = new System.Drawing.Point(890, 367);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(143, 20);
             this.label9.TabIndex = 51;
@@ -595,9 +525,9 @@ namespace RevelloAPP
             this.label10.ForeColor = System.Drawing.Color.Gray;
             this.label10.Location = new System.Drawing.Point(344, 154);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 20);
+            this.label10.Size = new System.Drawing.Size(75, 20);
             this.label10.TabIndex = 57;
-            this.label10.Text = "PVENTA";
+            this.label10.Text = "$ VENTA";
             // 
             // label11
             // 
@@ -606,9 +536,9 @@ namespace RevelloAPP
             this.label11.ForeColor = System.Drawing.Color.Gray;
             this.label11.Location = new System.Drawing.Point(217, 153);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 20);
+            this.label11.Size = new System.Drawing.Size(91, 20);
             this.label11.TabIndex = 58;
-            this.label11.Text = "PCOMPRA";
+            this.label11.Text = "$ COMPRA";
             // 
             // cboEstado
             // 
@@ -617,7 +547,7 @@ namespace RevelloAPP
             this.cboEstado.Items.AddRange(new object[] {
             "ACTIVO",
             "INACTIVO"});
-            this.cboEstado.Location = new System.Drawing.Point(894, 489);
+            this.cboEstado.Location = new System.Drawing.Point(894, 478);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(150, 32);
             this.cboEstado.TabIndex = 59;
@@ -627,7 +557,7 @@ namespace RevelloAPP
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Gray;
-            this.label12.Location = new System.Drawing.Point(890, 466);
+            this.label12.Location = new System.Drawing.Point(890, 455);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 20);
             this.label12.TabIndex = 60;
@@ -684,8 +614,6 @@ namespace RevelloAPP
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnExcel);
-            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -721,8 +649,6 @@ namespace RevelloAPP
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuFlatButton btnExcel;
-        private Bunifu.Framework.UI.BunifuFlatButton btnImprimir;
         private Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
         private Bunifu.Framework.UI.BunifuFlatButton btnEliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnEditar;

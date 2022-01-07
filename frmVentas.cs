@@ -86,20 +86,29 @@ namespace RevelloAPP
         
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+            if (txtEmail.Text == "" || txtNombre.Text == "" || txtCantidad.Text == ""||cboBaterias.Text=="")
             {
-                entidad.IdBateria = Int32.Parse(cboBaterias.SelectedValue.ToString());
-                entidad.Cantidad = Int32.Parse(txtCantidad.Text);
-                entidad.NombreCliente1 = txtNombre.Text;
-                entidad.EmailCliente1 = txtEmail.Text;
-                entidad.FechaVenta1 = dtpFecha.Value;
-                obj.AgregarVenta(entidad);
-                MessageBox.Show("Venta realizada con exito");
-                MostrarVentas();
+                MessageBox.Show("Debes llenar los datos correspondientes");
+
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.ToString());
+                try
+                {
+                    entidad.IdBateria = Int32.Parse(cboBaterias.SelectedValue.ToString());
+                    entidad.Cantidad = Int32.Parse(txtCantidad.Text);
+                    entidad.NombreCliente1 = txtNombre.Text;
+                    entidad.EmailCliente1 = txtEmail.Text;
+                    entidad.FechaVenta1 = dtpFecha.Value;
+                    obj.AgregarVenta(entidad);
+                    MessageBox.Show("Venta realizada con exito");
+                    MostrarVentas();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
             }
         }
 
@@ -125,15 +134,6 @@ namespace RevelloAPP
             msg.To.Add(txtEmail.Text);
             msg.Subject = "Comprobante de compra en Baterias Revello";
             msg.SubjectEncoding = System.Text.Encoding.UTF8;
-
-
-
-
-
-
-
-
-
 
             msg.Body = "Haz realizado la compra de " + txtCantidad.Text + " " + cboBaterias.Text + ". Porfavor, no eliminar el mail";
             msg.BodyEncoding = System.Text.Encoding.UTF8;
