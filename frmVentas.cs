@@ -14,6 +14,7 @@ namespace RevelloAPP
         E_VENTA entidad = new E_VENTA();
         private DateTime fechain;
         private DateTime fechafin;
+        private Boolean editarse;
         public frmVentas()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace RevelloAPP
 
         private void frmVentas_Load(object sender, EventArgs e)
         {
+            editarse = false;
             MostrarVentas();
             cboBaterias.DataSource = batnego.TablaActivas();
             cboBaterias.DisplayMember = "Nombre";
@@ -41,6 +43,7 @@ namespace RevelloAPP
             txtEmail.Text = "";
             txtNombre.Text = "";
             txtTotal.Text = "";
+            editarse = false;
         }
         public void MostrarVentas()
         {
@@ -67,20 +70,12 @@ namespace RevelloAPP
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (dgvVentas.SelectedRows.Count>0)
-            {
-                txtCodigo.Text = dgvVentas.CurrentRow.Cells[0].Value.ToString();
-                cboBaterias.Text = dgvVentas.CurrentRow.Cells[1].Value.ToString();
-                txtCantidad.Text = dgvVentas.CurrentRow.Cells[2].Value.ToString();
-                txtTotal.Text = dgvVentas.CurrentRow.Cells[3].Value.ToString();
-                txtNombre.Text = dgvVentas.CurrentRow.Cells[4].Value.ToString();
-                txtEmail.Text = dgvVentas.CurrentRow.Cells[5].Value.ToString();
-                dtpFecha.Text = dgvVentas.CurrentRow.Cells[6].Value.ToString();
-            }
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            editarse = false;
             LimpiarForms();
         }
         
@@ -135,14 +130,14 @@ namespace RevelloAPP
             msg.Subject = "Comprobante de compra en Baterias Revello";
             msg.SubjectEncoding = System.Text.Encoding.UTF8;
 
-            msg.Body = "Haz realizado la compra de " + txtCantidad.Text + " " + cboBaterias.Text + ". Porfavor, no eliminar el mail";
+            msg.Body = "Haz realizado la compra de " + txtCantidad.Text + " " + cboBaterias.Text + "en Baterias Revello. Utiliza este email como un comprobante por cualquier motivo y/o consulta. Muchas gracias por confiar en nosotros :)";
             msg.BodyEncoding = System.Text.Encoding.UTF8;
 
             msg.IsBodyHtml = false;
-            msg.From = new MailAddress("peklomas95@gmail.com");
+            msg.From = new MailAddress("bateriasrevello@gmail.com");
 
             SmtpClient cliente = new SmtpClient();
-            cliente.Credentials = new NetworkCredential("peklomas95@gmail.com", "Lautidry052");
+            cliente.Credentials = new NetworkCredential("bateriasrevello@gmail.com", "revello2020");
             cliente.Port = 587; cliente.EnableSsl = true; cliente.Host = "smtp.gmail.com";
 
             try
@@ -158,14 +153,33 @@ namespace RevelloAPP
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "")
+            if (editarse == true)
             {
-                MessageBox.Show("Debes seleccionar los datos de la venta");
+                if (txtEmail.Text == "")
+                {
+                    MessageBox.Show("Debes seleccionar los datos de la venta");
+                }
+                else
+                {
+                mandarMail();
+                MessageBox.Show("Comprobante enviado correctamente al cliente");
+                }
+
             }
-            else
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            if (dgvVentas.SelectedRows.Count > 0)
             {
-            mandarMail();
-            MessageBox.Show("Comprobante enviado correctamente al cliente");
+                txtCodigo.Text = dgvVentas.CurrentRow.Cells[0].Value.ToString();
+                cboBaterias.Text = dgvVentas.CurrentRow.Cells[1].Value.ToString();
+                txtCantidad.Text = dgvVentas.CurrentRow.Cells[2].Value.ToString();
+                txtTotal.Text = dgvVentas.CurrentRow.Cells[3].Value.ToString();
+                txtNombre.Text = dgvVentas.CurrentRow.Cells[4].Value.ToString();
+                txtEmail.Text = dgvVentas.CurrentRow.Cells[5].Value.ToString();
+                dtpFecha.Text = dgvVentas.CurrentRow.Cells[6].Value.ToString();
+                editarse = true;
             }
         }
     }

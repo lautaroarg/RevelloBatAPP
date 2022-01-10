@@ -18,6 +18,7 @@ namespace RevelloAPP
         negocioBateria batnego = new negocioBateria();
         private DateTime fechain;
         private DateTime fechafin;
+       
         
 
 
@@ -34,6 +35,7 @@ namespace RevelloAPP
             dtpFecha.Text = "";
             dgvCompras.ClearSelection();
             cboBaterias.Focus();
+            
         }
         private void frmCompras_Load(object sender, EventArgs e)
 
@@ -45,6 +47,7 @@ namespace RevelloAPP
             cboBaterias.DisplayMember = "Nombre";
             cboBaterias.ValueMember = "IdBateria";
             cboBaterias.Text = "";
+            
         }
         public void MostrarCompras()
         {
@@ -62,22 +65,27 @@ namespace RevelloAPP
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            
+            {
                 try
-            {
-                entidad.Bateria1 =Int32.Parse(cboBaterias.SelectedValue.ToString());
-                entidad.CantidadComprado1 =Int32.Parse(txtCantidad.Text);
-                entidad.FechaCompra1 = dtpFecha.Value;
+                {
+                    entidad.Bateria1 =Int32.Parse(cboBaterias.SelectedValue.ToString());
+                    entidad.CantidadComprado1 =Int32.Parse(txtCantidad.Text);
+                    entidad.FechaCompra1 = dtpFecha.Value;
 
-                objNegocio.AgregarCompra(entidad);
-                MessageBox.Show("Compra cargada con exito");
-                MostrarCompras();
-                LimpiarForms();
-            }
-            catch (Exception ex)
-            {
+                    objNegocio.AgregarCompra(entidad);
+                    MessageBox.Show("Compra cargada con exito");
+                    MostrarCompras();
+                    LimpiarForms();
+                }
+                catch (Exception ex)
+                {
 
-                MessageBox.Show(ex.ToString());
+                    MessageBox.Show(ex.ToString());
+                }
+
             }
+            
             
 
         }
@@ -122,7 +130,14 @@ namespace RevelloAPP
                 txtCantidad.Text= dgvCompras.CurrentRow.Cells[2].Value.ToString();
                 dtpFecha.Text= dgvCompras.CurrentRow.Cells[3].Value.ToString();
                 txtTotal.Text= dgvCompras.CurrentRow.Cells[4].Value.ToString();
+                
             }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            LimpiarForms();
+
         }
     }
 }

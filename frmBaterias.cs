@@ -165,11 +165,17 @@ namespace RevelloAPP
             MessageBox.Show("Bateria inactivada");
             LimpiarForms();
             MostrarBateriasActivas();
+            editarse = false;
             }
             else
             {
                 MessageBox.Show("Debes seleccionar una fila y hacer click en editarse, antes de eliminarla");
             }
+        }
+
+        private void cboEstado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+         
         }
     }
 
