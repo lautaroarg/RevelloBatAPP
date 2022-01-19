@@ -79,9 +79,19 @@ namespace RevelloAPP
             LimpiarForms();
         }
         
+        private bool TextosVacios()
+        {
+            if (txtEmail.Text == "" || txtNombre.Text == "" || txtCantidad.Text == "" || cboBaterias.Text == "")
+            {
+                return true;
+            }
+            {
+                return false;
+            }
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "" || txtNombre.Text == "" || txtCantidad.Text == ""||cboBaterias.Text=="")
+            if (TextosVacios())
             {
                 MessageBox.Show("Debes llenar los datos correspondientes");
 
@@ -109,7 +119,7 @@ namespace RevelloAPP
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (txtCodigo.Text == "")
+            if (TextosVacios() == true)
             {
                 MessageBox.Show("Primero debes seleccionar una venta para eliminarla");
             }
@@ -153,19 +163,28 @@ namespace RevelloAPP
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            if (editarse == true)
+            if (TextosVacios() == true)
             {
-                if (txtEmail.Text == "")
+                MessageBox.Show("Debes seleccionar los datos de la venta");
+                
+            }
+            else
+            {
+                if (editarse == true)
                 {
-                    MessageBox.Show("Debes seleccionar los datos de la venta");
+                    mandarMail();
+                    MessageBox.Show("Comprobante enviado correctamente al cliente");
                 }
                 else
                 {
-                mandarMail();
-                MessageBox.Show("Comprobante enviado correctamente al cliente");
+                    MessageBox.Show("Los datos ingresados no son correctos... ");
                 }
-
+                
             }
+            
+                
+
+            
         }
 
         private void btnEditar_Click_1(object sender, EventArgs e)

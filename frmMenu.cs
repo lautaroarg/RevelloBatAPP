@@ -46,5 +46,11 @@ namespace RevelloAPP
             frmVentas ofrm = new frmVentas();
             ofrm.Show();
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            frmReportes ofrm = new frmReportes();
+            ofrm.Show();
+        }
     }
 }

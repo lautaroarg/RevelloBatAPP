@@ -148,6 +148,7 @@ namespace RevelloAPP
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReportes.Textcolor = System.Drawing.Color.Yellow;
             this.btnReportes.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnBaterias
             // 
